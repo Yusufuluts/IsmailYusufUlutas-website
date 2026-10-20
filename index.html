@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsmail Yusuf Ulutaş | Personal Website</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Temel Sıfırlamalar ve Koyu Kahve Tema */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #181513; /* Koyu Kahve / Espresso Arka Plan */
+            color: #e6e1de;            /* Sıcak Krem/Gri Yazı */
+            padding-top: 20px;
+            padding-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigasyon / Header (Uçtan Uca Çizgi) */
+        header {
+            width: 100%;
+            border-bottom: 1px solid #332b27; /* Ekranı tam kaplayan kahve alt çizgi */
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #a0958e;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff; /* Üzerine gelince veya aktifken beyaz */
+        }
+
+        /* Hero / Karşılama */
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.05rem;
+            color: #c4b8b0;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            color: #a0958e;
+            font-size: 0.95rem;
+            max-width: 650px;
+        }
+
+        /* Genel Bölüm Stilleri */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #332b27;
+        }
+
+        .about-text {
+            color: #c4b8b0;
+            font-size: 0.95rem;
+        }
+
+        /* Yetenekler (Badges) */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #221d1a;
+            color: #e6e1de;
+            border: 1px solid #332b27;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        /* Projeler */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            background-color: #221d1a;
+            border: 1px solid #332b27;
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #554841; /* Fareyle üzerine gelince kenarlık hafif belirginleşir */
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .project-card p {
+            color: #a0958e;
+            font-size: 0.88rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* İletişim Butonları */
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #221d1a;
+            color: #ffffff;
+            border: 1px solid #332b27;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.88rem;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #181513;
+            border-color: #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #332b27;
+            text-align: center;
+            color: #776a62;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Menü (Uçtan Uca Çizgi İçin Header Dışarıda) -->
+    <header>
+        <div class="header-content">
+            <div class="logo">IYU</div>
+            <nav>
+                <a href="index.html" class="active">Ana Sayfa</a>
+                <a href="book.html">Kitaplar / İncelemeler</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Karşılama -->
+        <div class="hero">
+            <h1>İsmail Yusuf Ulutaş</h1>
+            <div class="subtitle">Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</div>
+            <p>Yazılım geliştirme, oyun mekanikleri ve sistem mimarileri üzerine çalışmalar yapıyorum. Modern teknolojiler kullanarak verimli ve sürdürülebilir çözümler üretmeyi hedefliyorum.</p>
+        </div>
+
+        <!-- Hakkımda -->
+        <section id="about">
+            <h2>Hakkımda</h2>
+            <p class="about-text">
+                Amasya Üniversitesi Bilgisayar Mühendisliği bölümünde eğitimime devam etmekteyim. Kodlama ve problem çözme tutkum doğrultusunda Python, C++, C# ve oyun motorları (Godot Engine) üzerinde projeler geliştiriyorum.
+            </p>
+        </section>
+
+        <!-- Yetenekler -->
+        <section id="skills">
+            <h2>Yetenekler & Teknolojiler</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Godot / GDScript</span>
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Linux</span>
+            </div>
+        </section>
+
+        <!-- Projeler -->
+        <section id="projects">
+            <h2>Öne Çıkan Projeler</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Simülasyon Modülleri (Mars Habitat)</h3>
+                    <p>Python ile geliştirilmiş tarım, çevre ve atmosferik yönetim mekaniklerini simüle eden yazılım modülü.</p>
+                    <a href="#" class="project-link">İncele &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h3>Godot Oyun Projesi</h3>
+                    <p>GDScript kullanılarak tasarlanmış 2D/3D oyun mekanikleri ve seviye tasarımları.</p>
+                    <a href="#" class="project-link">İncele &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim -->
+        <section id="contact">
+            <h2>İletişim</h2>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+                <a href="mailto:ornek@email.com" class="btn">E-posta Gönder</a>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 İsmail Yusuf Ulutaş
+        </footer>
+    </div>
+
+</body>
+</html>
